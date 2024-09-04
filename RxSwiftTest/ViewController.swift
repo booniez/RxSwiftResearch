@@ -13,10 +13,10 @@ class ViewController: UIViewController {
     let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        share()
-//        print("华丽的分割线-------------------")
-//        BehaviorRelay()
-//        print("华丽的分割线-------------------")
+        share()
+        print("华丽的分割线-------------------")
+        BehaviorRelay()
+        print("华丽的分割线-------------------")
         amb()
         print("华丽的分割线-------------------")
         // Do any additional setup after loading the view.
@@ -32,7 +32,7 @@ extension ViewController {
     private func share() {
         let observable = Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
             .do(onNext: { _ in
-                print("Observable executed")
+                print("[share] Observable executed")
             })
 //            .share()
             .share(replay: 1, scope: .forever)
@@ -44,13 +44,13 @@ extension ViewController {
         
         observable
             .subscribe(onNext: { value in
-                print("Subscriber 1: \(value)")
+                print("[share] Subscriber 1: \(value)")
             })
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             observable
                 .subscribe(onNext: { value in
-                    print("Subscriber 2: \(value)")
+                    print("[share] Subscriber 2: \(value)")
                 })
         }
         
