@@ -15,6 +15,8 @@
 		79858D3A2C67473600E61984 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 79858D392C67473600E61984 /* Base */; };
 		799CF8AF2C674AAB0080FAAC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 799CF8AE2C674AAB0080FAAC /* Kingfisher */; };
 		799CF8B22C674ADC0080FAAC /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 799CF8B12C674ADC0080FAAC /* RxCocoa */; };
+		79C6B8482C89CD9D00B759B8 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6B8462C89CD5500B759B8 /* LogViewController.swift */; };
+		79C6B8492C89CDA000B759B8 /* LogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6B8452C89CD5500B759B8 /* LogService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		79858D362C67473600E61984 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79858D392C67473600E61984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79858D3B2C67473600E61984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79C6B8452C89CD5500B759B8 /* LogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogService.swift; sourceTree = "<group>"; };
+		79C6B8462C89CD5500B759B8 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		79858D2C2C67473500E61984 /* RxSwiftTest */ = {
 			isa = PBXGroup;
 			children = (
+				79C6B8472C89CD5500B759B8 /* BackgroundTask */,
 				79858D2D2C67473500E61984 /* AppDelegate.swift */,
 				79858D2F2C67473500E61984 /* SceneDelegate.swift */,
 				79858D312C67473500E61984 /* ViewController.swift */,
@@ -69,6 +74,15 @@
 				79858D3B2C67473600E61984 /* Info.plist */,
 			);
 			path = RxSwiftTest;
+			sourceTree = "<group>";
+		};
+		79C6B8472C89CD5500B759B8 /* BackgroundTask */ = {
+			isa = PBXGroup;
+			children = (
+				79C6B8452C89CD5500B759B8 /* LogService.swift */,
+				79C6B8462C89CD5500B759B8 /* LogViewController.swift */,
+			);
+			path = BackgroundTask;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79C6B8492C89CDA000B759B8 /* LogService.swift in Sources */,
 				79858D322C67473500E61984 /* ViewController.swift in Sources */,
 				79858D2E2C67473500E61984 /* AppDelegate.swift in Sources */,
 				79858D302C67473500E61984 /* SceneDelegate.swift in Sources */,
+				79C6B8482C89CD9D00B759B8 /* LogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

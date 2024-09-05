@@ -13,15 +13,19 @@ class ViewController: UIViewController {
     let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-        share()
-        print("华丽的分割线-------------------")
-        BehaviorRelay()
-        print("华丽的分割线-------------------")
-        amb()
-        print("华丽的分割线-------------------")
+//        share()
+//        print("华丽的分割线-------------------")
+//        BehaviorRelay()
+//        print("华丽的分割线-------------------")
+//        amb()
+//        print("华丽的分割线-------------------")
         // Do any additional setup after loading the view.
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let logVc = LogViewController()
+        navigationController?.pushViewController(logVc, animated: true)
+    }
 
 }
 
